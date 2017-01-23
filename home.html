@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>上拉无线滚动-SUI移动版-</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<link rel="stylesheet" href="css/sm.min.css">
+<link rel="stylesheet" href="css/sm-extend.min.css">
+<link rel="stylesheet" href="css/home.css">
+
+<!--<link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">-->
+
+  </head>
+  <body>
+
+  <div class="page-group">
+    <div class="page page-current" id="page-1484040848281">
+      <header class="bar bar-nav">
+        <h1 class="title"></h1>
+        <a class="button button-link button-nav pull-right open-popup" data-popup=".popup-about">
+          关于
+          <span class="icon icon-menu"></span>
+        </a>
+      </header>
+
+      <div class="bar bar-standard bar-footer">
+        <a class="icon icon-edit pull-left open-panel" data-panel=".panel-left"></a>
+        <a class="icon icon-settings pull-right open-panel" data-panel=".panel-right"></a>
+      </div>
+
+      <div class="content native-scroll" data-type="">
+        <div class="buttons-tab fixed-tab" data-offset="24">
+          <!--<a href="#tab1" class="tab-link button">全部</a>-->
+          <a href="#tab1" class="tab-link button active">最新上映</a>
+          <a href="#tab2" class="tab-link button">待上映..</a>
+        </div>
+
+        <div class="tabs">
+          <div id="tab1" class="tab infinite-scroll active">
+            <div class="list-block">
+
+              <ul class="list-container list-block media-list">
+              </ul>
+            </div>
+            <!-- 加载提示符 -->
+            <div class="infinite-scroll-preloader" id="d2">
+              <div class="preloader">
+              </div>
+            </div>
+          </div>
+          <div id="tab2" class="tab">
+            <div class="list-block">
+              <ul class="list-container">
+                <li class="item-content"><div class="item-inner"><div class="item-title"></div></div></li>
+              </ul>
+            </div>
+            <!-- 加载提示符 -->
+            <div class="infinite-scroll-preloader">
+              <div class="preloader">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+<!--弹层-->
+
+  <div class="popup popup-about">
+    <header class="bar bar-nav">
+      <a class="button button-link button-nav pull-right close-popup">
+        关闭
+      </a>
+      <h1 class="title">关于SUI</h1>
+    </header>
+    <div class="content">
+      <div class="content-inner">
+        <div class="content-block">
+          <p>演示几个前端UI功能：<a class="close-popup" href="home.html">下拉加载</a>(列表排版)、弹层、侧栏</p>
+
+          <p><a class="button close-popup">确定</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="panel-overlay"></div>
+  <div class="panel panel-left panel-cover">
+    <div class="content-block">
+      <p>这是左侧栏</p>
+      <p><a href="#" class="close-panel">关闭</a></p>
+    </div>
+  </div>
+  <div class="panel panel-right panel-cover">
+    <div class="content-block">
+      <p>这是右侧栏</p>
+      <p></p>
+      <!-- Click on link with "close-panel" class will close panel -->
+      <p><a href="#" class="close-panel">关闭</a></p>
+    </div>
+  </div>
+
+
+<script type="text/html" id="titleTemplate">
+    <div><%= item.applyDate %></div>
+</script>
+
+
+<script src="lib/requirejs/requirejs.js"></script>
+<script src="lib/requirejs/config.js"></script>
+
+<script>
+  requirejs(['home'], function (p) {
+  });
+</script>
+
+
+  </body>
+</html>

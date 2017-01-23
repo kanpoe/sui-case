@@ -1,0 +1,18 @@
+.buttons-tab{
+    /*position: fixed;*/
+    width: 100%;
+    display: inline-flex;
+    z-index: 2;
+}
+.tabs{
+    padding-top: 20px;
+}
+.list-block{
+    margin: 0;
+}
+.item-title {
+    font-size: 0.7rem;
+}
+.list-block .item-subtitle{
+    font-size: .55rem;
+}
